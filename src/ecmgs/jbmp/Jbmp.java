@@ -101,22 +101,24 @@ public class Jbmp {
 	// Returns a map with the colors
 	public int[][][] getImage() {
 		
-		int[][][] ret = new int[size.width][size.height][3];
+		int[][][] ret = new int[size.width+1][size.height+1][3];
 		
 		int i = doffset;
 		
 		// Sets all the values
-		for (int y = size.height-1; y > 0; y --) {
+		for (int y = size.height; y > 0; y --) {
 			
-			for (int x = size.width-1; x > 0; x-- ) {
+			for (int x = 0; x < size.width; x++ ) {
 				
-				ret[x][y][0] = idata[i];
+				ret[x][y][2] = idata[i];
 				ret[x][y][1] = idata[i+1];
-				ret[x][y][2] = idata[i+2];
+				ret[x][y][0] = idata[i+2];
 				
 				i+=3;
 			}
 		}
+		
+		System.out.println("i es:"+Integer.toString(i));
 		
 		return ret;
 		
