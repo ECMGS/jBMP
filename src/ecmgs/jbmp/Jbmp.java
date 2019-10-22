@@ -116,6 +116,8 @@ public class Jbmp {
 				
 				i+=3;
 			}
+			
+			i+=size.width%4;
 		}
 		
 		System.out.println("i es:"+Integer.toString(i));
