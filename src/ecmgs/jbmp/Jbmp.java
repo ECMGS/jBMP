@@ -101,7 +101,7 @@ public class Jbmp {
 	// Returns a map with the colors
 	public int[][][] getImage() {
 		
-		int[][][] ret = new int[1152][648][3];
+		int[][][] ret = new int[size.width][size.height][3];
 		
 		int i = doffset;
 		
