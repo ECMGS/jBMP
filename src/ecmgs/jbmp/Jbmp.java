@@ -1,9 +1,6 @@
-/**
- * 
- */
+
 package ecmgs.jbmp;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -123,5 +120,10 @@ public class Jbmp {
 		
 		return ret;
 		
+	}
+	
+	//Returns the size of the image
+	public Dimension getSize() {
+		return size;
 	}
 }
